@@ -2,13 +2,16 @@
 import numpy as np
 import cv2
 import threading
-import time
+import datetime
+a=datetime.datetime.now()
 def function_1():
     video_capture_0 = cv2.VideoCapture(0)
 
     while True:
         ret0,frame0=video_capture_0.read()
         if(ret0):
+            b=datetime.datetime.now()
+            print(b-a)
             cv2.imshow("cam0",frame0)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
@@ -29,7 +32,6 @@ def function_2():
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         else:
-
             break
     video_capture_1.release()
     cv2.destroyAllWindows()
