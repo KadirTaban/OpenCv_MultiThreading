@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-from threading import Thread
+import threading
 import datetime
 
 def function_1():
