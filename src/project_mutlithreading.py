@@ -28,6 +28,7 @@ t2=threading.Thread(target=function_2)
 t1.start()
 t2.start()
 
+
 video_capture_0.release()
 video_capture_1.release()
 cv2.destroyAllWindows()
