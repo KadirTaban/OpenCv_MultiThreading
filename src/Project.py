@@ -3,7 +3,10 @@ import cv2
 import datetime
 a = datetime.datetime.now()
 video_capture_0=cv2.VideoCapture(0)
-video_capture_1=cv2.VideoCapture(1)
+path = "video.mp4"
+video_capture_1 = cv2.VideoCapture(path)
+b = datetime.datetime.now()
+print(b - a)
 
 while True:
     ret0, frame0= video_capture_0.read()
@@ -17,7 +20,8 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-
 video_capture_0.release()
 video_capture_1.release()
+
+
 cv2.destroyAllWindows()
