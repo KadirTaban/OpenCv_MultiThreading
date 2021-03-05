@@ -11,9 +11,8 @@ def function_1():
         ret0,frame0=video_capture_0.read()
         if(ret0):
             b=datetime.datetime.now()
-            print(b-a)
             cv2.imshow("cam0",frame0)
-            if cv2.waitKey(1) & 0xFF == ord('q'):
+            if cv2.waitKey(34) & 0xFF == ord('q'):
                 break
         else:
             break
@@ -29,7 +28,7 @@ def function_2():
         ret1,frame1=video_capture_1.read()
         if(ret1):
             cv2.imshow("cam1",frame1)
-            if cv2.waitKey(1) & 0xFF == ord('q'):
+            if cv2.waitKey(34) & 0xFF == ord('q'):
                 break
         else:
             break
